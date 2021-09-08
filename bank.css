@@ -7,8 +7,10 @@
 } */
 
 /* fa color  */
-.fas, .far{
-    color: #fd7e14;
+.fas{
+    
+    color: white;
+    margin-right: 15px;
 }
 
 .bg{
