@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome To Nishat Trust Bank LTD.</title>
+    <!-- linking tailwind css -->
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
+    <!-- font-awesome-cdn  -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+</head>
+
+<body>
+    <header>
+
+    </header>
+
+    <main>
+        <!-- welcome image -->
+        <div class="grid w-2/5 mx-auto mt-10">
+            <img src="assets/images/welcome.svg" alt="" srcset="">
+        </div>
+
+        <!-- amount -->
+        <section class="mt-10">
+            <div class="grid grid-cols-3 gap-6 w-3/4 mx-auto">
+                <div class="bg-blue-500 p-12 rounded">
+                    <h2 class="my-2 font-semibold text-3xl text-center text-white">Diposit</h2>
+                    <h3 class="my-2 font-semibold text-2xl text-center text-white">$<span
+                            id="depositDisplay">00.00</span></h3>
+                </div>
+                <div class="bg-blue-500 p-12 rounded">
+                    <h2 class="my-2 font-semibold text-3xl text-center text-white">Withdraw</h2>
+                    <h3 class="my-2 font-semibold text-2xl text-center text-white">$<span
+                            id="displayWithdraw">00.00</span></h3>
+                </div>
+                <div class="bg-blue-500 p-12 rounded ">
+                    <h2 class="my-2 font-semibold text-3xl text-center text-white">Balance</h2>
+                    <h3 class="my-2 font-semibold text-2xl text-center text-white">$<span
+                            id="displayBalance">00.00</span></h3>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- diposit & withdraw -->
+        <section class="mt-10 mb-20">
+            <div class="grid grid-cols-2 gap-10 w-3/4 mx-auto">
+                <div class="bg-yellow-500 p-12 rounded">
+                    <div class="w-full">
+                        <div action="" class="flex flex-col justify-center items-center">
+                            <h2 class="my-2 font-semibold text-3xl text-center text-white">Diposit Now</h2>
+                            <div class="mt-6 flex">
+                                <i class="far fa-envelope-open pr-3 text-xl "></i>
+                                <input type="number" name="" id="inputDeposit"
+                                    placeholder="$ Enter amount you want to deposit"
+                                    class="border-b-2 capitalize focus:outline-none focus:border-blue-600 w-80">
+                            </div>
+
+                            <button id="deposit-btn"
+                                class="uppercase py-2.5 px-16 bg-blue-500 text-white font-bold text-lg rounded-full mt-10 transform hover:translate-y-1 transition-all duration-500">Deposit</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-yellow-500 p-12 rounded">
+                    <div class="w-full">
+                        <div action="" class="flex flex-col justify-center items-center">
+                            <h2 class="my-2 font-semibold text-3xl text-center text-white">Withdraw Now</h2>
+                            <div class="mt-6 flex">
+                                <i class="far fa-envelope-open pr-3 text-xl "></i>
+                                <input type="number" name="" id="inputWithdraw"
+                                    placeholder="$ Enter amount you want to withdraw"
+                                    class="border-b-2 capitalize focus:outline-none focus:border-blue-600 w-80">
+                            </div>
+
+                            <button id="withdraw-btn"
+                                class="uppercase py-2.5 px-16 bg-blue-500 text-white font-bold text-lg rounded-full mt-10 transform hover:translate-y-1 transition-all duration-500">Withdraw</button>
+                        </div>
+                    </div>
+                </div>
+
+        </section>
+    </main>
+
+    <footer>
+
+    </footer>
+
+    <!-- javascript -->
+    <script src="js/index.js"></script>
+</body>
+
+</html>

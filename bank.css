@@ -1,0 +1,18 @@
+/* #bg-img{
+    background-image: url(assets/bg.png);
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-position-y: bottom;
+
+} */
+
+/* fa color  */
+.fas, .far{
+    color: #fd7e14;
+}
+
+.bg{
+    background-color: #f9af37;
+    
+}
+
