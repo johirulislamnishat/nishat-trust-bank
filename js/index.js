@@ -41,17 +41,19 @@ document.getElementById('deposit-btn').addEventListener('click', function () {
     // const inputField = parseFloat(inputFieldText);
 
 
-    // deposit display
-    const depositDisplay = document.getElementById('depositDisplay');
-    const depositBalanceText = depositDisplay.innerText;
-    const depositBalance = parseFloat(depositBalanceText);
-    depositDisplay.innerText = depositBalance + depositAmount;
+    if (depositAmount > 0) {
+        // deposit display
+        const depositDisplay = document.getElementById('depositDisplay');
+        const depositBalanceText = depositDisplay.innerText;
+        const depositBalance = parseFloat(depositBalanceText);
+        depositDisplay.innerText = depositBalance + depositAmount;
 
-    // balance display
-    const displayBalance = document.getElementById('displayBalance');
-    const balanceText = displayBalance.innerText;
-    const balance = parseFloat(balanceText);
-    displayBalance.innerText = depositAmount + balance;
+        // balance display
+        const displayBalance = document.getElementById('displayBalance');
+        const balanceText = displayBalance.innerText;
+        const balance = parseFloat(balanceText);
+        displayBalance.innerText = depositAmount + balance;
+    }
 
 })
 
@@ -63,20 +65,21 @@ document.getElementById('withdraw-btn').addEventListener('click', function () {
     // const withdrawText = inputWithdraw.value;
     // const withdraw = parseFloat(withdrawText);
 
-    // display withdraw
-    const withdrawDisplay = document.getElementById('displayWithdraw');
-    const withdrawAmountText = withdrawDisplay.innerText;
-    const withdrawAmount = parseFloat(withdrawAmountText);
-    const withdrawSum = inputWithdraw + withdrawAmount;
-    withdrawDisplay.innerText = withdrawSum;
+    if (inputWithdraw > 0) {
+        // display withdraw
+        const withdrawDisplay = document.getElementById('displayWithdraw');
+        const withdrawAmountText = withdrawDisplay.innerText;
+        const withdrawAmount = parseFloat(withdrawAmountText);
+        const withdrawSum = inputWithdraw + withdrawAmount;
+        withdrawDisplay.innerText = withdrawSum;
 
+        const remainingBalance = document.getElementById('displayBalance');
+        const remainingBalanceText = remainingBalance.innerText;
+        const remainingBalanceParse = parseFloat(remainingBalanceText);
+        const remainingBalanceSum = remainingBalanceParse - withdrawSum;
+        remainingBalance.innerText = remainingBalanceSum;
 
-    // remaining balance
-    const remainingBalance = document.getElementById('displayBalance');
-    const remainingBalanceText = remainingBalance.innerText;
-    const remainingBalanceParse = parseFloat(remainingBalanceText);
-    const remainingBalanceSum = remainingBalanceParse - withdrawSum;
-    remainingBalance.innerText = remainingBalanceSum;
+    }
 
 
 })
